@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+   
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>modder.lol</title>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta content="Dark.lol" property="og:title" />
+      <meta content="cool nigga" property="og:description" />
+      <link href="assets/css/anim.css" rel="stylesheet">
+      <link rel="stylesheet" href="assets/font-awesome-4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="assets/css/style.css" />
+      <link rel="stylesheet" href="assets/css/vile.css" />
+      <style>
+         #snowfall-container {
+         position: fixed;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         pointer-events: none;
+         z-index: 9999;
+         }
+         .snowflake {
+         position: absolute;
+         width: 5px;
+         height: 5px;
+         background-color: #ffffff;
+         border-radius: 50%;
+         pointer-events: none;
+         opacity: 0.4;
+         }
+         @keyframes fall {
+         to {
+         transform: translateY(100vh);
+         }
+         }
+         #blur-box {
+         position: fixed;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+         padding: 31px; 
+         width: 35%; 
+         background-color: rgba(0, 0, 0, 0.397);
+         backdrop-filter: blur(15px);
+         border-radius: 10px;
+         color: rgba(255, 255, 255, 0.774);
+         text-align: center;
+         }
+         #profile-picture {
+         width: 100px; 
+         height: 100px;
+         background-color: #ffffff00; 
+         border-radius: 50%;
+         position: absolute;
+         top:  30%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+         overflow: hidden;
+         }
+         #profile-picture img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+         }
+         #username {
+         font-size: 35px;
+         margin-top: 130px;
+         text-shadow: 0 0 25px rgba(255, 255, 255, 0.8);
+         }
+         #bio {
+         font-size: 18px; 
+         margin-top: 15px;
+         text-shadow: 0 0 25px rgba(255, 255, 255, 0.8);
+         }
+         #video-background {
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+         z-index: -1; 
+         }
+         .social-icon {
+         display: inline-block;
+         width: 32px;
+         height: 32px;
+         margin: 10px;
+         font-size: 34px;
+         text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+         transition: transform 0.3s ease-in-out; 
+         }
+         .social-icon:hover {
+         color: #ffffff;
+         transform: scale(1.2);
+         }
+         body {
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        .show-container {
+            padding-left: 20px;
+        }
+
+        pre {
+            color: white;
+            margin: 0;
+            white-space: pre-wrap; /* Preserve white spaces and allow line breaks */
+        }
+
+        a {
+            color: #66ccff; /* Link color */
+            text-decoration: underline; /* Underline the links */
+            cursor: pointer;
+        }
+      </style>
+      <script>
+         document.addEventListener("DOMContentLoaded", function () {
+             const numSnowflakes = 20;
+             const container = document.getElementById("snowfall-container");
+         
+             for (let i = 0; i < numSnowflakes; i++) {
+                 const snowflake = document.createElement("div");
+                 snowflake.className = "snowflake";
+                 container.appendChild(snowflake);
+         
+                 animateSnowflake(snowflake);
+             }
+         
+             function animateSnowflake(snowflake) {
+                 const speed = Math.random() * 2 + 0.5;
+                 const initialPosition = Math.random() * 100;
+                 const rotation = Math.random() * 360;
+         
+                 snowflake.style.left = initialPosition + "vw";
+                 snowflake.style.animation = `fall ${speed}s linear infinite`;
+                 snowflake.style.transform = `rotate(${rotation}deg)`;
+             }
+         });
+      </script>
+      <script>
+         window.RufflePlayer = window.RufflePlayer || {};
+         window.RufflePlayer.config = { "autoplay": "on", "unmuteOverlay": "hidden" };
+      </script>
+      <script type="text/javascript" src="assets/js/ruffle.js" defer="true"></script>
+      <link href="assets/css/cosmo.css" rel="stylesheet">
+   </head>
+   <body>
+      <div id="snowfall-container"></div>
+      <div id="enter"><b class="begin glowing-text">Click To Continue</b></div>
+      <div class="show-container">
+         <pre>
+             <!-- Clickable links -->
+             \   /    /    /                                 |               /                   \            /               |            \              |          \               \            /           \
+             \         |        \     |                 /               ./    \             /          |            /           | /    /          \          /               \           /\   /    /    /                                 |               /                   \            /               |            \              |          \               \            /           \
+    \\\\     \           \         |        \     |                 /               ./    \             /          |            /           | /    /          \          /               \           /\   /    /    /                                 |               /                   \            /               |            \              |          \               \            /           \
+             \         |        \     |                 /               ./    \             /          |            /           | /    /          \          /               \           /\   /    /    /                                 |               /                   \            /               |            \              |          \               \            /           \
+    | /               \         |        \     |                 /               ./    \             /          |            /           | /    /          \          /               \           
+    
+                                                                                                _____  _____
+                                                                                               <     `/     |
+                                                                                                >          (
+                                                                                               |   _     _  |
+                                                                                               |  |_) | |_) |
+                                                                                               |  | \ | |   |
+                                                                                               |            |
+                                                                                ______.______%_|            |__________  _____
+                                                                              _/                                       \|     |
+                                                                             |                   R A P T O R                  <
+                                                                             |_____.-._________              ____/|___________|
+                                                                                               | * Uh oh    |
+                                                                                               | + 2010-2024| 
+                                                                                               |            |
+                                                                                               |            |
+                                                                                               |   _        <
+                                                                                               |__/         |
+                                                                                                / `--.      |
+                                                                                              %|            |%
+                                                                                          |/.%%|          -< @%%%
+                                                                                          `\%`@|     v      |@@%@%%    - mfj
+                                                                                        .%%%@@@|%    |    % @@@%%@%%%%
+                                                                                   _.%%%%%%@@@@@@%%_/%\_%@@%%@@@@@@@%%%%%%
+    %%%%%%@@@@@@%%%%%%%@@@@@@%%%%%%%@@@@@@%%%%%%%@@@@@@%%%%%%%@@@@@@%%%%%%%@@@@@@%%%%%%%@@@@@@%%%%%%%@@@@@@%%%%%%%@@@@@@%%%%%%%@@@@@@%%%%%%%@@@@@@%%%%%%%@@@@@@%%%%%%%@@@@@@%%%%%%%@@@@@@%%%%%%%@@@%%%%%%@@@%%%%%%@@@%%%%%%@@@
+    
+    
+    
+                                                                    .S_sSSs     .S_SSSs     .S_sSSs    sdSS_SSSSSSbs    sSSs_sSSs     .S_sSSs   
+                                                                    .SS~YS%%b   .SS~SSSSS   .SS~YS%%b   YSSS~S%SSSSSP   d%%SP~YS%%b   .SS~YS%%b  
+                                                                    S%S   `S%b  S%S   SSSS  S%S   `S%b       S%S       d%S'     `S%b  S%S   `S%b 
+                                                                    S%S    S%S  S%S    S%S  S%S    S%S       S%S       S%S       S%S  S%S    S%S 
+                                                                    S%S    d*S  S%S SSSS%S  S%S    d*S       S&S       S&S       S&S  S%S    d*S 
+                                                                    S&S   .S*S  S&S  SSS%S  S&S   .S*S       S&S       S&S       S&S  S&S   .S*S 
+                                                                    S&S_sdSSS   S&S    S&S  S&S_sdSSS        S&S       S&S       S&S  S&S_sdSSS  
+                                                                    S&S~YSY%b   S&S    S&S  S&S~YSSY         S&S       S&S       S&S  S&S~YSY%b  
+                                                                    S*S   `S%b  S*S    S&S  S*S              S*S       S*b       d*S  S*S   `S%b 
+                                                                    S*S    S%S  S*S    S*S  S*S              S*S       S*S.     .S*S  S*S    S%S 
+                                                                    S*S    S&S  S*S    S*S  S*S              S*S        SSSbs_sdSSS   S*S    S&S 
+                                                                    S*S    SSS  SSS    S*S  S*S              S*S         YSSP~YSSY    S*S    SSS 
+                                                                    SP                 SP   SP               SP                       SP         
+                                                                    Y                  Y    Y                Y                        Y   
+    
+    
+                                                                                             .--------------------.
+                                                                                             |  __       _______  |
+                                                                                             | |" \     |   __ "\ |
+                                                                                             | ||  |    (. |__) :)|
+                                                                                             | |:  |    |:  ____/ |
+                                                                                             | |.  |    (|  /     |
+                                                                                             | /\  |\  /|__/ \    |
+                                                                                             |(__\_|_)(_______)   |
+                                                                                             '--------------------'
+    
+    
+    
+                                                                                            [~] [IP]: 50.43.131.110
+                                                                                            [~] [ISP] : Frontier Communications Solutions
+                                                                                            [~] [Organization]: ADSL Frontier Communications Norwalk OH
+                                                                                            [~] [City]: Amsterdam
+                                                                                            [~] [Country name]: Estados Unidos
+                                                                                            [~] [Region]: OH
+                                                                                            [~] [Name of the continent]: NorteamÃ©rica
+                                                                                            [~] [Region / State]: Ohio
+                                                                                            [~] [Continent code]: NA
+                                                                                            [~] [Latitude]: 40.4692
+                                                                                            [~] [Longitude]: -80.9587
+                                                                                            [~] [Time zone]: America/New_York
+                                                                                            [~] [ZIP code]: 43903
+                                                                                            [~] [AS number and organization]: AS5650 Frontier Communications of America, Inc.
+                                                                                            [~] [Country code]: US
+                                                                                            [~] [Inverse DNS IP]:  
+                                                                                            [~] [Mobile connection]]: False
+                                                                                            [~] [Mobile connection  not found!]
+                                                                                            [~] [National currency]: USD
+                                                                                            [~] [District]: 
+                                                                                            [~] [VPN?]: False
+    
+    
+    
+    
+                                                                          .--------------------------------------------------------------.
+                                                                          | _____  ___        __       ___      ___   _______   ________ |
+                                                                          |(\"   \|"  \      /""\     |"  \    /"  | /"     "| /"       )|
+                                                                          ||.\\   \    |    /    \     \   \  //   |(: ______)(:   \___/ |
+                                                                          ||: \.   \\  |   /' /\  \    /\\  \/.    | \/    |   \___  \   |
+                                                                          ||.  \    \. |  //  __'  \  |: \.        | // ___)_   __/  \\  |
+                                                                          ||    \    \ | /   /  \\  \ |.  \    /:  |(:      "| /" \   :) |
+                                                                          | \___|\____\)(___/    \___)|___|\__/|___| \_______)(_______/  |
+                                                                          '--------------------------------------------------------------'
+    
+    
+                                                                                            FIRST NAME | JENSON |
+                                                                                            DISCORD USER | raptorrrrrr. |
+                                                                                            XBOX USER | RaprorxD |
+                                                                                            EPIC GAMES USER | raptorãƒ„ãƒ„ãƒ„ãƒ„ãƒ„ãƒ„ãƒ„ãƒ„ãƒ„ãƒ„ |
+                                                                                            GITHUB USER | raptordadev |
+    
+    
+    
+                                                                        .--------------------------------------------------------------------.
+                                                                        |                                    ___         ___                 |
+                                                                        |                                   (   )  .-.  (   )                |
+                                                                        |  .--.     ___ .-.      .--.     .-.| |  ( __)  | |_         .--.   |
+                                                                        | /    \   (   )   \    /    \   /   \ |  (''") (   __)     /  _  \  |
+                                                                        ||  .-. ;   | ' .-. ;  |  .-. ; |  .-. |   | |   | |       . .' `. ; |
+                                                                        ||  |(___)  |  / (___) |  | | | | |  | |   | |   | | ___   | '   | | |
+                                                                        ||  |       | |        |  |/  | | |  | |   | |   | |(   )  _\_`.(___)|
+                                                                        ||  | ___   | |        |  ' _.' | |  | |   | |   | | | |  (   ). '.  |
+                                                                        ||  '(   )  | |        |  .'.-. | '  | |   | |   | ' | |   | |  `\ | |
+                                                                        |'  `-' |   | |        '  `-' / ' `-'  /   | |   ' `-' ;   ; '._,' ' |
+                                                                        | `.__,'   (___)        `.__.'   `.__,'   (___)   `.__.     '.___.'  |
+                                                                        '--------------------------------------------------------------------'
+    
+    
+    
+    
+                                                                       .--..--..--..--..--..--..--..--..--..--..--..--..--..--..--..--..--..--. 
+                                                                       / .. \.. \.. \.. \.. \.. \.. \.. \.. \.. \.. \.. \.. \.. \.. \.. \.. \.. \
+                                                                       \ \/\ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `'\ \/ /
+                                                                        \/ /`--'`--'`--'`--'`--'`--'`--'`--'`--'`--'`--'`--'`--'`--'`--'`--'\/ / 
+                                                                        / /\                                                                / /\ 
+                                                                       / /\ \  ____    _    ____  _  __    ____  _   _  ____ _  ____   __  / /\ \
+                                                                       \ \/ / |  _ \  / \  |  _ \| |/ /   |  _ \| | | |/ ___| |/ /\ \ / /  \ \/ /
+                                                                        \/ /  | | | |/ _ \ | |_) | ' /    | | | | | | | |   | ' /  \ V /    \/ / 
+                                                                        / /\  | |_| / ___ \|  _ <| . \    | |_| | |_| | |___| . \   | |     / /\ 
+                                                                       / /\ \ |____/_/   \_\_| \_\_|\_\___|____/ \___/ \____|_|\_\  |_|    / /\ \
+                                                                       \ \/ /                        |_____|                               \ \/ /
+                                                                        \/ /                                                                \/ / 
+                                                                        / /\.--..--..--..--..--..--..--..--..--..--..--..--..--..--..--..--./ /\ 
+                                                                       / /\ \.. \.. \.. \.. \.. \.. \.. \.. \.. \.. \.. \.. \.. \.. \.. \.. \/\ \
+                                                                       \ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `' /
+                                                                        `--'`--'`--'`--'`--'`--'`--'`--'`--'`--'`--'`--'`--'`--'`--'`--'`--'`--' 
+    
+                                                                .--..--..--..--..--..--..--..--..--..--..--..--..--..--..--..--..--..--..--..--..--..--. 
+                                                                / .. \.. \.. \.. \.. \.. \.. \.. \.. \.. \.. \.. \.. \.. \.. \.. \.. \.. \.. \.. \.. \.. \
+                                                                \ \/\ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `'\ \/ /
+                                                                 \/ /`--'`--'`--'`--'`--'`--'`--'`--'`--'`--'`--'`--'`--'`--'`--'`--'`--'`--'`--'`--'\/ / 
+                                                                 / /\                                                                                / /\ 
+                                                                / /\ \  ____    _    ____  _  __       _    ____ _____ _____ ____   ___ ___ ____    / /\ \
+                                                                \ \/ / |  _ \  / \  |  _ \| |/ /      / \  / ___|_   _| ____|  _ \ / _ \_ _|  _ \   \ \/ /
+                                                                 \/ /  | | | |/ _ \ | |_) | ' /      / _ \ \___ \ | | |  _| | |_) | | | | || | | |   \/ / 
+                                                                 / /\  | |_| / ___ \|  _ <| . \     / ___ \ ___) || | | |___|  _ <| |_| | || |_| |   / /\ 
+                                                                / /\ \ |____/_/   \_\_| \_\_|\_\___/_/   \_\____/ |_| |_____|_| \_\\___/___|____/   / /\ \
+                                                                \ \/ /                        |_____|                                               \ \/ /
+                                                                 \/ /                                                                                \/ / 
+                                                                 / /\.--..--..--..--..--..--..--..--..--..--..--..--..--..--..--..--..--..--..--..--./ /\ 
+                                                                / /\ \.. \.. \.. \.. \.. \.. \.. \.. \.. \.. \.. \.. \.. \.. \.. \.. \.. \.. \.. \.. \/\ \
+                                                                \ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `' /
+                                                                 `--'`--'`--'`--'`--'`--'`--'`--'`--'`--'`--'`--'`--'`--'`--'`--'`--'`--'`--'`--'`--'`--' 
+    
+    
+                                                                        .--..--..--..--..--..--..--..--..--..--..--..--..--..--..--..--..--..--..--. 
+                                                                        / .. \.. \.. \.. \.. \.. \.. \.. \.. \.. \.. \.. \.. \.. \.. \.. \.. \.. \.. \
+                                                                        \ \/\ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `'\ \/ /
+                                                                         \/ /`--'`--'`--'`--'`--'`--'`--'`--'`--'`--'`--'`--'`--'`--'`--'`--'`--'\/ / 
+                                                                         / /\                                                                    / /\ 
+                                                                        / /\ \  ____    _    ____  _  __    _    _   _  ____ ___    _    _   _  / /\ \
+                                                                        \ \/ / |  _ \  / \  |  _ \| |/ /   | |  | | | |/ ___|_ _|  / \  | \ | | \ \/ /
+                                                                         \/ /  | | | |/ _ \ | |_) | ' /    | |  | | | | |    | |  / _ \ |  \| |  \/ / 
+                                                                         / /\  | |_| / ___ \|  _ <| . \    | |__| |_| | |___ | | / ___ \| |\  |  / /\ 
+                                                                        / /\ \ |____/_/   \_\_| \_\_|\_\___|_____\___/ \____|___/_/   \_\_| \_| / /\ \
+                                                                        \ \/ /                        |_____|                                   \ \/ /
+                                                                         \/ /                                                                    \/ / 
+                                                                         / /\.--..--..--..--..--..--..--..--..--..--..--..--..--..--..--..--..--./ /\ 
+                                                                        / /\ \.. \.. \.. \.. \.. \.. \.. \.. \.. \.. \.. \.. \.. \.. \.. \.. \.. \/\ \
+                                                                        \ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `' /
+                                                                         `--'`--'`--'`--'`--'`--'`--'`--'`--'`--'`--'`--'`--'`--'`--'`--'`--'`--'`--' 
+    
+    
+                                                                                     .--..--..--..--..--..--..--..--..--..--..--..--. 
+                                                                                     / .. \.. \.. \.. \.. \.. \.. \.. \.. \.. \.. \.. \
+                                                                                     \ \/\ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `'\ \/ /
+                                                                                      \/ /`--'`--'`--'`--'`--'`--'`--'`--'`--'`--'\/ / 
+                                                                                      / /\                                        / /\ 
+                                                                                     / /\ \  _____ ___  ____  _____ ____ _____   / /\ \
+                                                                                     \ \/ / |  ___/ _ \|  _ \| ____/ ___|_   _|  \ \/ /
+                                                                                      \/ /  | |_ | | | | |_) |  _| \___ \ | |     \/ / 
+                                                                                      / /\  |  _|| |_| |  _ <| |___ ___) || |     / /\ 
+                                                                                     / /\ \ |_|   \___/|_| \_\_____|____/ |_|    / /\ \
+                                                                                     \ \/ /                                      \ \/ /
+                                                                                      \/ /                                        \/ / 
+                                                                                      / /\.--..--..--..--..--..--..--..--..--..--./ /\ 
+                                                                                     / /\ \.. \.. \.. \.. \.. \.. \.. \.. \.. \.. \/\ \
+                                                                                     \ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `' /
+                                                                                      `--'`--'`--'`--'`--'`--'`--'`--'`--'`--'`--'`--' 
+    
+         </pre>
+         <script src="assets/js/audio.js"></script>
+         <script src="assets/js/disable_inspect.js"></script>
+      </div>
+   </body>
+</html>
